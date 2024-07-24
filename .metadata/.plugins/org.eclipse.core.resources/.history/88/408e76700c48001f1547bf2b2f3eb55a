@@ -1,0 +1,52 @@
+package baitrenlop;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class hoadon {
+	private String sohoadon;
+	private int somathang;
+	khachhang kh=new khachhang();
+	hang ten[];
+	ngaythang ngay;
+	public void nhap() {
+		Scanner sc= new Scanner(System.in);
+		sohoadon=sc.nextLine();
+		somathang=sc.nextInt();
+		ten=new hang[somathang];
+		kh.nhap();
+		for(int i=0;i<somathang;i++) {
+			ten[i]=new hang();
+			ten[i].nhap();
+		}
+	    ngay=new ngaythang(sc.nextInt(),sc.nextInt(),sc.nextInt());
+		
+	}
+	public double tinhtong() {
+		double tong =0;
+		for(int i=0;i<somathang;i++) {
+			tong+=ten[i].tinhtongtien();
+		}
+		return tong;
+	}
+	
+	
+	
+	public void indulieu() {
+		System.out.println("số HD   "+sohoadon+"   ngay tao "+ngay.toString());
+		kh.toString();
+		ten[0].intieude();
+		for(int i=0;i<somathang;i++) {
+			System.out.println("\n");
+			ten[i].indulieu();
+			
+		}
+		System.out.println("\n");
+		System.out.println("          ---------------------          ");
+		System.out.println("tong tien :"+tinhtong());
+		
+	}
+	
+	
+    
+}

@@ -1,0 +1,38 @@
+package baitrenlop;
+
+import java.util.Scanner;
+
+ class hang {
+private String tenhang;
+private double soluong;
+private double dongia;
+public void nhap() {
+	Scanner sc=new Scanner(System.in );
+	tenhang=sc.nextLine();
+	soluong=sc.nextDouble();
+	dongia=sc.nextDouble();
+	
+    }
+	public double tinhtongtien() {
+		return soluong*dongia;
+	   }
+    public void intieude() {
+    	System.out.printf("%15 %15 %15 %15","ten hang","so luong","dongia","thanhtien");
+    	}
+    public void indulieu() {
+    	System.out.printf("%15 %15 %15 %15",tenhang,soluong,dongia,soluong*dongia);
+    	}
+	public String getTenhang() {
+		return tenhang;
+	}
+	public double getSoluong() {
+		return soluong;
+	}
+	
+    
+    
+    
+   
+
+
+}
