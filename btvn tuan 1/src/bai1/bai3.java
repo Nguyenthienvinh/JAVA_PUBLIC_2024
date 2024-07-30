@@ -10,7 +10,7 @@ public class bai3 {
 		int a[][]=new int[n][n];
 		int c1=0,h1=0,c2=n-1,h2=n-1;
 		int d=1;
-		while(h1<=h2&&c1<=c2)
+		while(d<=16)
 		{
 			for(int i=c1;i<=c2;i++)
 		{
